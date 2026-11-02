@@ -17,7 +17,9 @@ __pycache__/
 !.env.example
 data/raw/
 data/processed/
-data/snapshots/
+data/snapshots/*
+!data/snapshots/
+!data/snapshots/january-2026.json
 
 # Editors and OS
 .DS_Store
@@ -25,3 +27,10 @@ data/snapshots/
 .vscode/
 *.swp
 *.swo
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

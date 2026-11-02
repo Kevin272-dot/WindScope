@@ -16,3 +16,19 @@ class AccuracyResponse(BaseModel):
     mape_percent: float | None
     mape_sample_count: int
     mape_zero_actual_excluded_count: int
+
+
+class IntervalPoint(BaseModel):
+    start_time: datetime
+    forecast_publish_time: datetime | None
+    forecast_mw: float | None
+    actual_mw: float | None
+    error_mw: float | None
+    actual_source_intervals: int
+
+
+class IntervalsResponse(BaseModel):
+    delivery_date: date
+    cutoff: datetime
+    expected_hours: int
+    intervals: list[IntervalPoint]
